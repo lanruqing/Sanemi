@@ -1,0 +1,17 @@
+{
+  "name": "sanemi",
+  "private": true,
+  "workspaces": [
+    "UI",
+    "Backend"
+  ],
+  "scripts": {
+    "install-all": "npm install",
+    "dev": "concurrently \"npm run dev-fe\" \"npm run dev-be\"",
+    "dev-fe": "npm run dev -w UI",
+    "dev-be": "npm run dev -w Backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
